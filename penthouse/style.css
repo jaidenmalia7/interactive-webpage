@@ -1,0 +1,99 @@
+@font-face {
+    src: url(fonts/brushed.ttf);
+    font-family: brushed;
+}
+
+@font-face {
+    src: url(fonts/WORDSOFLOVE.ttf);
+    font-family: love;
+}
+
+body {
+    font-family: love;
+    font-size: 45px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* color fades accordingly */
+    transition: background 0.2s linear;
+
+}
+
+/* dark theme */
+body.dark {
+    background-color: #292c35;
+}
+
+body.dark h2 {
+    font-family: love;
+    color:#292c35;
+}
+
+body.dark.freak {
+    font-family: brushed;
+    color: #fff;
+}
+
+.freak {
+    font-family: brushed;
+    color: #fff;
+    transition: all 0.4s linear;
+}
+
+/* body.dark.freak:hover {
+    color: red;
+} */
+
+.freak:hover {
+    color: red;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 31px;
+	width: 31px;
+    /* starting position */
+	transform: translateX(0px);
+    /* end position */
+	transition: transform 0.1s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.label {
+    background-color: #111;
+    display: flex;
+    /* rounded border */
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+
+/* toggle */
+.ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 31px;
+    width: 31px;
+}
